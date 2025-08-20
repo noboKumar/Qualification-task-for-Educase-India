@@ -2,16 +2,21 @@ import React, { useContext } from "react";
 import InputField from "../Components/InputField";
 import Button from "../Components/Button";
 import { AuthContext } from "../context/AuthContext";
+import { useNavigate } from "react-router";
 
 const SignIn = () => {
   const { loginUser } = useContext(AuthContext);
+  const navigate = useNavigate();
   const handleSignIn = (e) => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
     loginUser(email, password)
-      .then((result) => console.log(result))
+      .then((result) => {
+        console.log(result);
+        navigate("/profile");
+      })
       .catch((err) => console.log(err));
   };
   return (

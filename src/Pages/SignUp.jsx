@@ -2,9 +2,12 @@ import React, { useContext } from "react";
 import InputField from "../Components/InputField";
 import Button from "../Components/Button";
 import { AuthContext } from "../context/AuthContext";
+import { useNavigate } from "react-router";
 
 const SignUp = () => {
   const { createUser, updateUser, setUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+  
   const handleSignUp = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -22,6 +25,7 @@ const SignUp = () => {
         updateUser({ displayName: userName })
           .then(() => {
             setUser({ ...userData, displayName: userName });
+            navigate("/profile");
           })
           .catch((err) => console.log(err));
       })

@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import InputField from "../Components/InputField";
 import Button from "../Components/Button";
+import { AuthContext } from "../context/AuthContext";
 
 const SignUp = () => {
+  const { createUser, updateUser, setUser } = useContext(AuthContext);
   const handleSignUp = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -12,6 +14,18 @@ const SignUp = () => {
     const password = form.password.value;
     const company = form.company.value;
     const agency = form.agency.value;
+
+    createUser(email, password)
+      .then((result) => {
+        console.log(result);
+        const userData = result.user;
+        updateUser({ displayName: userName })
+          .then(() => {
+            setUser({ ...userData, displayName: userName });
+          })
+          .catch((err) => console.log(err));
+      })
+      .catch((err) => console.log(err));
 
     console.log({ userName, phone, email, password, company, agency });
   };

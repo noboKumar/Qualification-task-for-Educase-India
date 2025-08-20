@@ -4,7 +4,7 @@ import Button from "../Components/Button";
 
 const SignUp = () => {
   return (
-    <div className="flex flex-col justify-between min-h-screen py-10">
+    <div className="flex flex-col justify-between min-h-screen pt-10 pb-8">
       <div>
         <div>
           <h1 className="text-[28px] font-medium">Create your PopX account</h1>

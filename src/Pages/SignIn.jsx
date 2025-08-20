@@ -24,7 +24,7 @@ const SignIn = () => {
       <div>
         <form onSubmit={handleSignIn} className="space-y-8">
           <div>
-            <h1 className="text-[28px] font-medium">
+            <h1 className="text-[28px] font-medium w-2/3">
               Signin to your PopX account
             </h1>
             <p className="text-lg text-black/60">

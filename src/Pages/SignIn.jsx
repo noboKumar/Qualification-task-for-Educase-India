@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import InputField from "../Components/InputField";
 import Button from "../Components/Button";
+import { AuthContext } from "../context/AuthContext";
 
 const SignIn = () => {
+  const { loginUser } = useContext(AuthContext);
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    loginUser(email, password)
+      .then((result) => console.log(result))
+      .catch((err) => console.log(err));
+  };
   return (
     <div className="flex flex-col justify-between min-h-screen py-5">
       <div>
-        <div className="space-y-8">
+        <form onSubmit={handleSignIn} className="space-y-8">
           <div>
             <h1 className="text-[28px] font-medium">
               Signin to your PopX account
@@ -19,15 +30,24 @@ const SignIn = () => {
             <InputField
               text={"Email Address"}
               placeholder={"Enter email address"}
+              name={"email"}
+              type={"email"}
+              required={"required"}
             />
-            <InputField text={"Password"} placeholder={"Enter password"} />
+            <InputField
+              text={"Password"}
+              placeholder={"Enter password"}
+              name={"password"}
+              type={"password"}
+              required={"required"}
+            />
             <Button
               text={"Login"}
               bgColor={"bg-[#6C25FF]"}
               textColor={"text-white"}
             ></Button>
           </div>
-        </div>
+        </form>
       </div>
       <div></div>
     </div>

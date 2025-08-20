@@ -23,8 +23,8 @@ const SignIn = () => {
             <InputField text={"Password"} placeholder={"Enter password"} />
             <Button
               text={"Login"}
-              bgColor={"#6C25FF"}
-              textColor={"white"}
+              bgColor={"bg-[#6C25FF]"}
+              textColor={"text-white"}
             ></Button>
           </div>
         </div>

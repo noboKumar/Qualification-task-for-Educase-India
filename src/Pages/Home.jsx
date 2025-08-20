@@ -16,14 +16,14 @@ const Home = () => {
         <div className="flex flex-col gap-2.5 font-medium">
           <Link to={"/signup"}>
             <Button
-              bgColor={"#6C25FF"}
+              bgColor={"bg-[#6C25FF]"}
               text={"Create Account"}
-              textColor={"white"}
+              textColor={"text-white"}
             ></Button>
           </Link>
           <Link to={"/signin"}>
             <Button
-              bgColor={"#6C25FF4B"}
+              bgColor={"bg-[#6C25FF4B]"}
               text={"Already Registered? Login"}
             ></Button>
           </Link>

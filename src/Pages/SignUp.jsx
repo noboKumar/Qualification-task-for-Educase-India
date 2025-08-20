@@ -7,7 +7,7 @@ import { useNavigate } from "react-router";
 const SignUp = () => {
   const { createUser, updateUser, setUser } = useContext(AuthContext);
   const navigate = useNavigate();
-  
+
   const handleSignUp = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -78,7 +78,9 @@ const SignUp = () => {
             name={"company"}
           ></InputField>
           <div className="space-y-2.5">
-            <h3 className="text-[13px]">Are You an Agency?</h3>
+            <h3 className="text-[13px]">
+              Are You an Agency? <span className="text-red-500">*</span>
+            </h3>
 
             <div className="space-x-6 flex items-center">
               <div className="space-x-3 flex items-center">

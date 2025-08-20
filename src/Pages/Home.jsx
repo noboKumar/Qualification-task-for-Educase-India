@@ -14,11 +14,13 @@ const Home = () => {
           </p>
         </div>
         <div className="flex flex-col gap-2.5 font-medium">
-          <Button
-            bgColor={"#6C25FF"}
-            text={"Create Account"}
-            textColor={"white"}
-          ></Button>
+          <Link to={"/signup"}>
+            <Button
+              bgColor={"#6C25FF"}
+              text={"Create Account"}
+              textColor={"white"}
+            ></Button>
+          </Link>
           <Link to={"/signin"}>
             <Button
               bgColor={"#6C25FF4B"}

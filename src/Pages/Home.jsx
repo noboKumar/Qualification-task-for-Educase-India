@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../Components/Button";
 
 const Home = () => {
   return (
@@ -12,12 +13,15 @@ const Home = () => {
           </p>
         </div>
         <div className="flex flex-col gap-2.5 font-medium">
-          <button className="bg-[#6C25FF] py-3 text-white rounded-[6px] cursor-pointer">
-            Create Account
-          </button>
-          <button className="bg-[#6C25FF4B] py-3 rounded-[6px] cursor-pointer">
-            Already Registered? Login
-          </button>
+          <Button
+            bgColor={"#6C25FF"}
+            text={"Create Account"}
+            textColor={"white"}
+          ></Button>
+          <Button
+            bgColor={"#6C25FF4B"}
+            text={"Already Registered? Login"}
+          ></Button>
         </div>
       </div>
     </div>

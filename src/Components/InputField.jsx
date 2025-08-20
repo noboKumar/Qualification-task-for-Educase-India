@@ -1,0 +1,16 @@
+import React from "react";
+
+const InputField = ({ text, type, placeholder }) => {
+  return (
+    <fieldset className="border border-gray-300 rounded-md px-3 py-1 focus-within:border-purple-600">
+      <legend className="text-sm text-[#6C25FF] px-2">{text}</legend>
+      <input
+        className="w-full outline-none border-0 placeholder-gray-400"
+        type={type}
+        placeholder={placeholder}
+      />
+    </fieldset>
+  );
+};
+
+export default InputField;

@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../Components/Button";
+import { Link } from "react-router";
 
 const Home = () => {
   return (
@@ -18,10 +19,12 @@ const Home = () => {
             text={"Create Account"}
             textColor={"white"}
           ></Button>
-          <Button
-            bgColor={"#6C25FF4B"}
-            text={"Already Registered? Login"}
-          ></Button>
+          <Link to={"/signin"}>
+            <Button
+              bgColor={"#6C25FF4B"}
+              text={"Already Registered? Login"}
+            ></Button>
+          </Link>
         </div>
       </div>
     </div>

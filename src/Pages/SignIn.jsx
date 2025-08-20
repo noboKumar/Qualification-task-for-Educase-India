@@ -20,7 +20,7 @@ const SignIn = () => {
       .catch((err) => console.log(err));
   };
   return (
-    <div className="flex flex-col justify-between min-h-screen py-5">
+    <div className="flex flex-col justify-between min-h-screen px-5 py-5">
       <div>
         <form onSubmit={handleSignIn} className="space-y-8">
           <div>

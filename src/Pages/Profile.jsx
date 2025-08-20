@@ -6,10 +6,12 @@ import { AuthContext } from "../context/AuthContext";
 const Profile = () => {
   const { user } = useContext(AuthContext);
   return (
-    <div className="flex flex-col justify-between min-h-screen py-7 w-full">
+    <div className="flex flex-col justify-between min-h-screen w-full pb-7">
       <div>
-        <h1 className="text-[18px] pb-5">Account Settings</h1>
-        <div className="flex gap-5 py-8">
+        <div className="bg-white">
+          <h1 className="text-[18px] pb-5 pt-7 px-5">Account Settings</h1>
+        </div>
+        <div className="flex gap-5 py-8 px-5">
           <div className="relative">
             <div>
               <img src={profile} alt="profile-photo" />
@@ -23,7 +25,7 @@ const Profile = () => {
             <p className="text-[14px]">{user?.email}</p>
           </div>
         </div>
-        <p className="text-[14px] pb-5">
+        <p className="text-[14px] pb-5 px-5">
           Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam
           Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat,
           Sed Diam

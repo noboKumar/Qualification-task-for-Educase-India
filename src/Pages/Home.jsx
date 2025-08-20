@@ -4,7 +4,7 @@ import { Link } from "react-router";
 
 const Home = () => {
   return (
-    <div className="flex flex-col justify-between min-h-screen py-5">
+    <div className="flex flex-col justify-between min-h-screen py-5 px-5">
       <div></div>
       <div className="space-y-7">
         <div>

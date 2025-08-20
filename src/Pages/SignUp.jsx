@@ -36,7 +36,7 @@ const SignUp = () => {
   return (
     <form
       onSubmit={handleSignUp}
-      className="flex flex-col justify-between min-h-screen pt-10 pb-8"
+      className="flex flex-col justify-between min-h-screen pt-10 pb-8 px-5"
     >
       <div>
         <div>
